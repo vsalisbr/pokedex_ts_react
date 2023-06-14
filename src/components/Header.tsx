@@ -4,7 +4,7 @@ import { HeaderContainer, PokemonLogo, TitleLink, User } from './HeaderCSS';
 const Header = (): ReactElement => {
     return (
         <HeaderContainer>
-            <TitleLink  to='/'>
+            <TitleLink to='/pokedex'>
                 <h1>Pokedex</h1>
             </TitleLink >
             <User>NOMEDOUSUÁRIO</User>

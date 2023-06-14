@@ -1,14 +1,18 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
-import { Pokemon } from '../types/PokemonTypes';
+import { Pokemon, PokemonDetails } from '../types/PokemonTypes';
 
 type GlobalContent = {
     pokemonList: Pokemon[],
-    setPokemonList: Dispatch<SetStateAction<never[]>> 
+    setPokemonList: Dispatch<SetStateAction<Pokemon[]>>,
+    pokedex: PokemonDetails[],
+    setPokedex: Dispatch<SetStateAction<PokemonDetails[]>>,  
 }
 
 const PokemonContext = createContext<GlobalContent>({
     pokemonList: [],
-    setPokemonList: () => {[]}
+    setPokemonList: () => {[]},
+    pokedex: [],
+    setPokedex: () => {[]}
 });
 
 export default PokemonContext;
